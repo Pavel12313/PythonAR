@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>Python AIで音声認識 PythonでAI IB220001 ジルバーミンツ パベル</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="{% static 'css/css.css' %}">
+    </head>
+    <body>
+        <h1>PythonでAI IB220001 ジルバーミンツ パベル</h1>
+        <h2>翻訳スタートボタンを押してからマイクに話しかけてください</h2>
+        <p></p>
+        <div>
+            <form name="name_form" action="ajax/" method="POST">
+                {% csrf_token %}
+                <!--
+                <p>
+                    <input type="text" id="src_text" name="src_text" value="ja">
+                    <input type="text" id="dest_text" name="dest_text" value="en">
+                </p>
+                -->    
+                <p>
+
+                    <select name="src_text">
+                        <option value="ja">日本語</option>                        
+                        <option value="en">英語</option>                        
+                        <option value="vi">ベトナム語</option>                        
+                    </select>
+                    <select name="dest_text">
+                        <option value="en">英語</option>                        
+                        <option value="vi">ベトナム語</option>                        
+                        <option value="ja">日本語</option>                        
+                    </select>
+                </p>
+                <input class="btn" type="submit" value="翻訳スタート"> 
+            </form>                                 
+            <p><span id="id_div_ajax_response_src"></span></p>     
+            <p><span id="id_div_ajax_response_dest"></span></p>        
+        </div>
+        <script>
+
+            
+            $("form").submit(function(event) {
+                $("#id_div_ajax_response_src").text('マイクで何か話してください');
+                event.preventDefault();
+                var form = $(this);
+                $.ajax({
+                    url: form.prop("action"),
+                    method: form.prop("method"),
+                    data: form.serialize(),
+                    //timeout: 10000,
+                    dataType: "text",
+                })
+                .done( function(data) {
+                    //alert("done");
+                    //$("#id_div_ajax_response_src").text(data[0]);
+                    $("#id_div_ajax_response_src").text("もう一度やる場合は翻訳スタートボタンを押してください")
+                    $("#id_div_ajax_response_dest").text(data);
+                })
+            });
+
+            
+        </script>
+    </body>
+</html>

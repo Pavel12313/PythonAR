@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Python AIで顔認識 PythonでAI IB220001 ジルバーミンツ パベル</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  </head>
+  <body>
+    <div class="header">
+      <h1 class="header__title">PythonでAI IB220001 ジルバーミンツ パベル</h1>
+    </div>
+    <p class="intro-text">カメラに顔を映してください。</p>
+    <div class="image-container">
+      <div id="image_area">
+        <img src="/video_feed" width="810" height="540"/>
+      </div>
+    </div>
+  </body>
+</html>

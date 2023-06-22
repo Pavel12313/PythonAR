@@ -1,0 +1,85 @@
+body {
+    background-color: #f2f2f2;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3em;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+form {
+    margin-bottom: 50px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+select {
+    padding: 10px;
+    margin-right: 10px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #333;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNCIgaGVpZ2h0PSIxNCIgdmlld0JveD0iMCAwIDE0IDE0Ij4gIDxwYXRoIGZpbGw9IiM4ODgiIGQ9Ik03LjQ5IDQuNzlsLTQuMjggNC4yOGMtLjEuMS0uMjEuMS0uMzIgMGwtNC4yOC00LjI4Yy0uNi0uNi0uNi0xLjYyIDAtMi4yMnMuNjEtLjYyIDEuNjItLjYyLjYyIDAgMS4yLjQ4IDEuMjEgMS4wOXYuMDJhMi4yMiAyLjIyIDAgMCAwIDIuMjIgMi4yMnYtLjAyYzAtLjYxLjQ5LTEuMDkgMS4xLTEuMDkuNjEgMCAxLjIuNDggMS4yIDEuMDl6Ii8+PC9zdmc+);
+    background-position: right 12px top 12px;
+    background-repeat: no-repeat;
+    background-size: 10px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+#id_div_ajax_response_src {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #4CAF50;
+}
+
+#id_div_ajax_response_dest {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #333;
+}
+
+
